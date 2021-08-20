@@ -6,22 +6,20 @@ public class Produto {
     
     public Produto(){}
     
-    public Produto(String descricao, String medida){
+    public Produto(int id,String descricao, String medida){
+        this.id = id;
         this.descricao = descricao;
         this.medida = medida;
     }
     
-    private Long id;
+    private int id;
     private String descricao;
     private String medida;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescricao() {
         return descricao;
@@ -38,6 +36,13 @@ public class Produto {
     public void setMedida(String medida) {
         this.medida = medida;
     }
+
+    @Override
+    public String toString() {
+        return "Produto{" + "id=" + id + ", descricao=" + descricao + ", medida=" + medida + '}';
+    }
+    
+    
     
     
 }

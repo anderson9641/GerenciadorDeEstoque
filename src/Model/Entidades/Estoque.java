@@ -15,9 +15,9 @@ public class Estoque {
 
     private Produto produto;
     private double quantidadeDisponivel;
-    private List<ItemProduto> produtos;
+    private List<ItemSaida> produtos;
 
-    public List<ItemProduto> getProdutos() {
+    public List<ItemSaida> getProdutos() {
         return produtos;
     }
 
@@ -37,9 +37,9 @@ public class Estoque {
         this.quantidadeDisponivel = quantidadeDisponivel;
     }
 
-    public void EntradaItens(ItemProduto itemProduto) {
-        ItemProduto item = itemProduto;
-        for (ItemProduto i : produtos) {
+    public void EntradaItens(ItemSaida itemProduto) {
+        ItemSaida item = itemProduto;
+        for (ItemSaida i : produtos) {
 
             if (item.getProduto().getId() == i.getProduto().getId()) {
                 
@@ -49,9 +49,9 @@ public class Estoque {
         }
     }
     
-    public void saidaItens(ItemProduto itemProduto) {
-        ItemProduto item = itemProduto;
-        for (ItemProduto i : produtos) {
+    public void saidaItens(ItemSaida itemProduto) {
+        ItemSaida item = itemProduto;
+        for (ItemSaida i : produtos) {
 
             if (item.getProduto().getId() == i.getProduto().getId()) {
                 if(item.getQuantidade() > i.getQuantidade())

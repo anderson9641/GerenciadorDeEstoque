@@ -8,25 +8,26 @@ public class Fornecedor {
         
     }
     
-    public Fornecedor(String nome, String endereco, String fone){
+    public Fornecedor(int id, String nome, String endereco, String fone){
+        this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.fone = fone;
     }
     
     
-    private Long id;
+    private int id;
     private String nome;
     private String endereco;
     private String fone;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
-
-    public void setId(Long id) {
+    public void setId(int id){
         this.id = id;
     }
+
 
     public String getNome() {
         return nome;

@@ -2,12 +2,12 @@
 package Model.Entidades;
 
 
-public class ItemProduto {
+public class ItemEntrada {
 
-    public ItemProduto() {
+    public ItemEntrada() {
     }
     
-    public ItemProduto(Produto produto, double quantidade) {
+    public ItemEntrada(Produto produto, double quantidade) {
         this.produto = produto;
         this.quantidade = quantidade;
     }

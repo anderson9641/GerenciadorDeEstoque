@@ -8,7 +8,7 @@ public class Saida {
     public Saida() {
     }
 
-    public Saida(Long id, Escola escola, List<ItemProduto> produtos, Date dataEntrega) {
+    public Saida(int id, Escola escola, List<ItemSaida> produtos, Date dataEntrega) {
         this.id = id;
         this.escola = escola;
         this.produtos = produtos;
@@ -16,16 +16,16 @@ public class Saida {
     }
 
        
-    private Long id;
+    private int id;
     private Escola escola;
-    private List <ItemProduto> produtos;
+    private List <ItemSaida> produtos;
     private Date dataEntrega; 
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -37,11 +37,11 @@ public class Saida {
         this.escola = escola;
     }
 
-    public List<ItemProduto> getProdutos() {
+    public List<ItemSaida> getProdutos() {
         return produtos;
     }
 
-    public void setProdutos(List<ItemProduto> produtos) {
+    public void setProdutos(List<ItemSaida> produtos) {
         this.produtos = produtos;
     }
 

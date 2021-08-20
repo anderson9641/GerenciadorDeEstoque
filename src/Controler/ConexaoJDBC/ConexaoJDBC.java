@@ -11,7 +11,7 @@ public class ConexaoJDBC {
     public boolean conectar() {
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:Banco/banco.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:src/Banco/banco.db");
             if (connection != null) {
                 System.out.println("Conexión exitosa!");
             }
@@ -47,6 +47,7 @@ public class ConexaoJDBC {
     }
     
     public Connection getConexao(){
+        System.out.println("pegou conexao");
         return this.connection;
     }
 

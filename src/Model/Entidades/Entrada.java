@@ -19,13 +19,13 @@ public class Entrada {
     private Long id;
     private Fornecedor fornecedor;
 
-    public List<ItemProduto> getProdutos() {
+    public List<ItemSaida> getProdutos() {
         return produtos;
     }
 
     private String notaFiscal;
     private Date data;
-    private List <ItemProduto> produtos;
+    private List <ItemSaida> produtos;
 
     public Long getId() {
         return id;

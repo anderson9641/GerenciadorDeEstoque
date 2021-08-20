@@ -9,7 +9,8 @@ public class Escola {
         
     }
     
-    public Escola(String nome,String endereco,String fone,String responsavel){
+    public Escola(int id, String nome,String endereco,String fone,String responsavel){
+        this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.fone = fone;
@@ -17,17 +18,17 @@ public class Escola {
     }
     
     
-    private Long id;
+    private int id;
     private String nome;
     private String endereco;
     private String fone;
     private String responsavel;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -61,6 +62,16 @@ public class Escola {
 
     public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
+    }
+    
+    public Object[] modeloTabela(){
+        return new Object[]{
+            this.getId(), 
+            this.getNome(), 
+            this.getEndereco(), 
+            this.getFone(), 
+            this.getResponsavel()
+        };
     }
 
 
