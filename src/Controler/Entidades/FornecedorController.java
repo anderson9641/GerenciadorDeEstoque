@@ -25,5 +25,9 @@ public class FornecedorController {
     public void atualizarFornecedor(Fornecedor f){
         fornecedor.update(f);
     }
+    
+    public Fornecedor consultarId(int id){
+        return fornecedor.findById(id);
+    }
 
 }

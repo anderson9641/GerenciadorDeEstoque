@@ -91,8 +91,10 @@ public class ProdutoDAO {
             while (rs.next()) {
 
                 Produto produtoConsultado = new Produto();
+                produtoConsultado.setId(rs.getInt("id"));
                 produtoConsultado.setDescricao(rs.getString("descricao"));
                 produtoConsultado.setMedida(rs.getString("medida"));
+                produtoConsultado.setQuantidade(rs.getDouble("quantidade"));
 
                 produtos.add(produtoConsultado);
 
@@ -123,14 +125,18 @@ public class ProdutoDAO {
 
         try {
             con = conexao.getConexao();
-            ps = con.prepareStatement("SELECT * FROM produto WHERE descricao = ?");
+            ps = con.prepareStatement("SELECT * FROM produto WHERE id = ?");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
+                produtoConsultado.setId(rs.getInt("id"));
                 produtoConsultado.setDescricao(rs.getString("descricao"));
                 produtoConsultado.setMedida(rs.getString("medida"));
-            }else{
+                produtoConsultado.setQuantidade(rs.getDouble("quantidade"));
+                
+
+            } else {
                 return null;
             }
         } catch (SQLException e) {
@@ -157,6 +163,45 @@ public class ProdutoDAO {
         }
 
         return produtoConsultado;
+    }
+
+    public Produto ById(int id) {
+
+        Connection con = null;
+        PreparedStatement ps = null;
+        this.conexao.conectar();
+
+        Produto produto = new Produto();
+
+        try {
+            con = conexao.getConexao();
+            ps = con.prepareStatement("SELECT * FROM produto WHERE id = ?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            
+
+                produto.setId(rs.getInt("id"));
+                
+                produto.setDescricao(rs.getString("descricao"));
+                
+                produto.setMedida(rs.getString("medida"));
+                
+                produto.setQuantidade(rs.getDouble("quantidade"));
+
+                
+
+             
+            
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+
+        } finally {
+            this.conexao.desconectar();
+        }
+
+        return produto;
     }
 
 //inseri produto no banco 
@@ -231,7 +276,7 @@ public class ProdutoDAO {
 
     public void update(Produto produto) {
 
-        String sql = "UPDATE produto SET descricao = ?, medida = ? WHERE id = ?";
+        String sql = "UPDATE produto SET descricao = ?, medida = ?, quantidade = ? WHERE id = ?";
 
         Connection conn = null;
         PreparedStatement pstm = null;
@@ -249,7 +294,8 @@ public class ProdutoDAO {
             //Adicionar o valor do segundo parâmetro da sql
             pstm.setString(2, produto.getMedida());
             //Adiciona o valor do terceiro parâmetro da sql
-            pstm.setLong(3, produto.getId());
+            pstm.setDouble(3, produto.getQuantidade());
+            pstm.setLong(4, produto.getId());
 
             //Executa a sql para inserção dos dados
             pstm.execute();

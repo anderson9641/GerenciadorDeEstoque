@@ -167,7 +167,7 @@ public class FormEscola extends javax.swing.JDialog {
         escola.setFone(fone);
         escola.setResponsavel(resp);
         
-        System.out.println(escola.getId());
+        
         
         if(escola.getId() == 0){
             controle.inserirEscola(escola);

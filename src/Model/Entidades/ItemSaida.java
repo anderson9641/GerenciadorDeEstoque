@@ -7,19 +7,36 @@ public class ItemSaida {
     public ItemSaida() {
     }
     
-    public ItemSaida(Produto produto, double quantidade) {
+    public ItemSaida(int produto,int saida, double quantidade) {
         this.produto = produto;
         this.quantidade = quantidade;
     }
 
-   private Produto produto;
+   private int saida;
+   private int produto;
    private double quantidade;
 
-    public Produto getProduto() {
+    public int getint() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setint(int produto) {
+        this.produto = produto;
+    }
+
+    public int getSaida() {
+        return saida;
+    }
+
+    public void setSaida(int saida) {
+        this.saida = saida;
+    }
+
+    public int getProduto() {
+        return produto;
+    }
+
+    public void setProduto(int produto) {
         this.produto = produto;
     }
 
@@ -29,11 +46,7 @@ public class ItemSaida {
 
     public void setQuantidade(double quantidade) {
         this.quantidade = quantidade;
-    }
-   
-   
-
-    
+    }    
    
     
 }

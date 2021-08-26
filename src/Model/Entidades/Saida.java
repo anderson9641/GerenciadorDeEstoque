@@ -1,5 +1,7 @@
 package Model.Entidades;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -44,13 +46,24 @@ public class Saida {
     public void setProdutos(List<ItemSaida> produtos) {
         this.produtos = produtos;
     }
-
-    public Date getDataEntrega() {
-        return dataEntrega;
+    
+    public String getDataEntrega() {
+        
+        SimpleDateFormat formatado = new SimpleDateFormat("dd/MM/yyyy");
+        String dataFormat = formatado.format(dataEntrega);
+        return dataFormat;
     }
 
-    public void setDataEntrega(Date dataEntrega) {
-        this.dataEntrega = dataEntrega;
+   public void setDataEntrega(Date data) {
+        this.dataEntrega = data;
+    }
+    public void setDataEntrega(String data) throws ParseException {
+        
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        this.dataEntrega = formatter.parse(data);;
+    }
+    public void addItemSaida(ItemSaida i){
+        produtos.add(i);
     }
     
     

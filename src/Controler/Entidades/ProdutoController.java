@@ -14,6 +14,10 @@ public class ProdutoController {
         return produto.findAll();
     }
     
+    public Produto consultarProdutoId(int id){
+        return produto.ById(id);
+    }
+    
     public void inserirProduto(Produto p){
         produto.inserirProduto(p);
     }
