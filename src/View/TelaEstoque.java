@@ -40,10 +40,17 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(1000, 590));
 
+        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+
+        jLabel1.setBackground(new java.awt.Color(107, 122, 161));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Estoque");
 
+        jLabel2.setBackground(new java.awt.Color(107, 122, 161));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Consultar : ");
 
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setText("Codigo");
         jTextField1.setToolTipText("Codigo");
         jTextField1.setName(""); // NOI18N
@@ -53,8 +60,11 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             }
         });
 
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setText("nome");
 
+        jButton1.setBackground(new java.awt.Color(107, 122, 161));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Buscar");
 
         tbProdutos.setModel(new javax.swing.table.DefaultTableModel(
@@ -93,6 +103,8 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             tbProdutos.getColumnModel().getColumn(3).setMaxWidth(100);
         }
 
+        tbnNovo.setBackground(new java.awt.Color(107, 122, 161));
+        tbnNovo.setForeground(new java.awt.Color(0, 0, 0));
         tbnNovo.setText("Novo");
         tbnNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +112,8 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             }
         });
 
+        tbnEditar.setBackground(new java.awt.Color(107, 122, 161));
+        tbnEditar.setForeground(new java.awt.Color(0, 0, 0));
         tbnEditar.setText("Editar");
         tbnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +121,8 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             }
         });
 
+        btnExcluir.setBackground(new java.awt.Color(107, 122, 161));
+        btnExcluir.setForeground(new java.awt.Color(0, 0, 0));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,27 +138,26 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(tbnNovo)
-                                .addGap(18, 18, 18)
-                                .addComponent(tbnEditar)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnExcluir)))
-                        .addGap(40, 40, 40))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton1))
+                    .addComponent(jLabel1))
+                .addContainerGap(369, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(jButton1))
-                            .addComponent(jLabel1))
-                        .addContainerGap(369, Short.MAX_VALUE))))
+                        .addComponent(tbnNovo)
+                        .addGap(18, 18, 18)
+                        .addComponent(tbnEditar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnExcluir)))
+                .addGap(40, 40, 40))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,8 +176,8 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

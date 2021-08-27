@@ -37,7 +37,10 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
         setClosable(true);
         setAutoscrolls(true);
 
+        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+
         jLabel1.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Fronecedores");
 
         tbFornecedor.setModel(new javax.swing.table.DefaultTableModel(
@@ -65,6 +68,8 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tbFornecedor);
 
+        btnNovo.setBackground(new java.awt.Color(107, 122, 161));
+        btnNovo.setForeground(new java.awt.Color(0, 0, 0));
         btnNovo.setText("Novo");
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +77,8 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
             }
         });
 
+        btnEditar.setBackground(new java.awt.Color(107, 122, 161));
+        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +86,8 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
             }
         });
 
+        btnExcluir.setBackground(new java.awt.Color(107, 122, 161));
+        btnExcluir.setForeground(new java.awt.Color(0, 0, 0));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +95,8 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(107, 122, 161));
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Consultar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +104,9 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
             }
         });
 
+        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Consultar :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -103,13 +117,13 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 891, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(0, 698, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)

@@ -63,7 +63,7 @@ public class Produto {
     }
     
     public void outProduto(double qtd){
-        this.quantidade -= qtd;
+        this.quantidade = qtd - quantidade;
     }
     
     

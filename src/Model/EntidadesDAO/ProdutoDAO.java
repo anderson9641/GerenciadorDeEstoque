@@ -116,54 +116,54 @@ public class ProdutoDAO {
         return produtos;
     }
 
-    public Produto findById(int id) {
-        Connection con = null;
-        PreparedStatement ps = null;
-        this.conexao.conectar();
-
-        Produto produtoConsultado = new Produto();
-
-        try {
-            con = conexao.getConexao();
-            ps = con.prepareStatement("SELECT * FROM produto WHERE id = ?");
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
-
-            if (rs.next()) {
-                produtoConsultado.setId(rs.getInt("id"));
-                produtoConsultado.setDescricao(rs.getString("descricao"));
-                produtoConsultado.setMedida(rs.getString("medida"));
-                produtoConsultado.setQuantidade(rs.getDouble("quantidade"));
-                
-
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-
-            e.printStackTrace();
-
-        } finally {
-
-            try {
-                if (ps != null) {
-
-                    ps.close();
-                }
-
-                if (con != null) {
-                    con.close();
-                    this.conexao.desconectar();
-                }
-
-            } catch (Exception e) {
-
-                e.printStackTrace();
-            }
-        }
-
-        return produtoConsultado;
-    }
+//    public Produto findById(int id) {
+//        Connection con = null;
+//        PreparedStatement ps = null;
+//        this.conexao.conectar();
+//
+//        Produto produtoConsultado = new Produto();
+//
+//        try {
+//            con = conexao.getConexao();
+//            ps = con.prepareStatement("SELECT * FROM produto WHERE id = ?");
+//            ps.setInt(1, id);
+//            ResultSet rs = ps.executeQuery();
+//
+//            if (rs.next()) {
+//                produtoConsultado.setId(rs.getInt("id"));
+//                produtoConsultado.setDescricao(rs.getString("descricao"));
+//                produtoConsultado.setMedida(rs.getString("medida"));
+//                produtoConsultado.setQuantidade(rs.getDouble("quantidade"));
+//                
+//
+//            } else {
+//                return null;
+//            }
+//        } catch (SQLException e) {
+//
+//            e.printStackTrace();
+//
+//        } finally {
+//
+//            try {
+//                if (ps != null) {
+//
+//                    ps.close();
+//                }
+//
+//                if (con != null) {
+//                    con.close();
+//                    this.conexao.desconectar();
+//                }
+//
+//            } catch (Exception e) {
+//
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        return produtoConsultado;
+//    }
 
     public Produto ById(int id) {
 
@@ -217,6 +217,7 @@ public class ProdutoDAO {
             ps.setString(1, produto.getDescricao());
             ps.setString(2, produto.getMedida());
             ps.executeUpdate();
+           
 
         } catch (SQLException e) {
             e.printStackTrace();
