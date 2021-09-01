@@ -52,7 +52,7 @@ public class TelaProdutos extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
@@ -74,7 +74,7 @@ public class TelaProdutos extends javax.swing.JFrame {
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setText("Descrição");
 
-        jButton2.setBackground(new java.awt.Color(107, 122, 161));
+        jButton2.setBackground(new java.awt.Color(146, 166, 76));
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Add Produto");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +83,7 @@ public class TelaProdutos extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(17, 50, 77));
+        jButton3.setBackground(new java.awt.Color(146, 166, 76));
         jButton3.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Novo Produto");
@@ -132,7 +132,7 @@ public class TelaProdutos extends javax.swing.JFrame {
             tbProdutos.getColumnModel().getColumn(3).setMaxWidth(100);
         }
 
-        jButton4.setBackground(new java.awt.Color(107, 122, 161));
+        jButton4.setBackground(new java.awt.Color(146, 166, 76));
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Buscar");
 

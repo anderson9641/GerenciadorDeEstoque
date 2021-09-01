@@ -38,9 +38,11 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
         btnExcluir = new javax.swing.JButton();
 
         setClosable(true);
-        setPreferredSize(new java.awt.Dimension(1000, 590));
+        setMaximumSize(new java.awt.Dimension(1037, 640));
+        setMinimumSize(new java.awt.Dimension(1037, 640));
+        setPreferredSize(new java.awt.Dimension(1037, 640));
 
-        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
 
         jLabel1.setBackground(new java.awt.Color(107, 122, 161));
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -63,8 +65,9 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setText("nome");
 
-        jButton1.setBackground(new java.awt.Color(107, 122, 161));
+        jButton1.setBackground(new java.awt.Color(146, 166, 76));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lupa.png"))); // NOI18N
         jButton1.setText("Buscar");
 
         tbProdutos.setModel(new javax.swing.table.DefaultTableModel(
@@ -103,8 +106,9 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             tbProdutos.getColumnModel().getColumn(3).setMaxWidth(100);
         }
 
-        tbnNovo.setBackground(new java.awt.Color(107, 122, 161));
+        tbnNovo.setBackground(new java.awt.Color(146, 166, 76));
         tbnNovo.setForeground(new java.awt.Color(0, 0, 0));
+        tbnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/plus.png"))); // NOI18N
         tbnNovo.setText("Novo");
         tbnNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,8 +116,9 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             }
         });
 
-        tbnEditar.setBackground(new java.awt.Color(107, 122, 161));
+        tbnEditar.setBackground(new java.awt.Color(146, 166, 76));
         tbnEditar.setForeground(new java.awt.Color(0, 0, 0));
+        tbnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/editar.png"))); // NOI18N
         tbnEditar.setText("Editar");
         tbnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,8 +126,9 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
             }
         });
 
-        btnExcluir.setBackground(new java.awt.Color(107, 122, 161));
+        btnExcluir.setBackground(new java.awt.Color(146, 166, 76));
         btnExcluir.setForeground(new java.awt.Color(0, 0, 0));
+        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/remove.png"))); // NOI18N
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,56 +141,61 @@ public class TelaEstoque extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(jButton1))
-                    .addComponent(jLabel1))
-                .addContainerGap(369, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(tbnNovo)
-                        .addGap(18, 18, 18)
-                        .addComponent(tbnEditar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnExcluir)))
-                .addGap(40, 40, 40))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1)
+                                .addGap(51, 51, 51)
+                                .addComponent(tbnNovo)
+                                .addGap(18, 18, 18)
+                                .addComponent(tbnEditar)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnExcluir)))
+                        .addGap(0, 25, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1)
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tbnNovo)
-                    .addComponent(tbnEditar)
-                    .addComponent(btnExcluir))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(jLabel1)
+                            .addGap(67, 67, 67))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel2)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1)
+                            .addComponent(tbnNovo)
+                            .addComponent(tbnEditar)
+                            .addComponent(btnExcluir))))
+                .addGap(48, 48, 48)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

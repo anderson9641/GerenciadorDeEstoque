@@ -37,7 +37,7 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
         setClosable(true);
         setAutoscrolls(true);
 
-        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
 
         jLabel1.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -48,7 +48,7 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "NOME", "ENDEREÇO", "FONE"
+                "CÓDIGO", "NOME", "ENDEREÇO", "FONE"
             }
         ) {
             Class[] types = new Class [] {
@@ -67,37 +67,61 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
             }
         });
         jScrollPane1.setViewportView(tbFornecedor);
+        if (tbFornecedor.getColumnModel().getColumnCount() > 0) {
+            tbFornecedor.getColumnModel().getColumn(0).setMinWidth(100);
+            tbFornecedor.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tbFornecedor.getColumnModel().getColumn(0).setMaxWidth(100);
+            tbFornecedor.getColumnModel().getColumn(3).setMinWidth(150);
+            tbFornecedor.getColumnModel().getColumn(3).setPreferredWidth(150);
+            tbFornecedor.getColumnModel().getColumn(3).setMaxWidth(150);
+        }
 
-        btnNovo.setBackground(new java.awt.Color(107, 122, 161));
+        btnNovo.setBackground(new java.awt.Color(146, 166, 76));
         btnNovo.setForeground(new java.awt.Color(0, 0, 0));
-        btnNovo.setText("Novo");
+        btnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/plus.png"))); // NOI18N
+        btnNovo.setText("  Novo");
+        btnNovo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnNovo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnNovo.setIconTextGap(8);
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNovoActionPerformed(evt);
             }
         });
 
-        btnEditar.setBackground(new java.awt.Color(107, 122, 161));
+        btnEditar.setBackground(new java.awt.Color(146, 166, 76));
         btnEditar.setForeground(new java.awt.Color(0, 0, 0));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/editar.png"))); // NOI18N
         btnEditar.setText("Editar");
+        btnEditar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnEditar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnEditar.setIconTextGap(8);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
             }
         });
 
-        btnExcluir.setBackground(new java.awt.Color(107, 122, 161));
+        btnExcluir.setBackground(new java.awt.Color(146, 166, 76));
         btnExcluir.setForeground(new java.awt.Color(0, 0, 0));
+        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/remove.png"))); // NOI18N
         btnExcluir.setText("Excluir");
+        btnExcluir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnExcluir.setIconTextGap(8);
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(107, 122, 161));
+        jButton4.setBackground(new java.awt.Color(146, 166, 76));
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lupa.png"))); // NOI18N
         jButton4.setText("Consultar");
+        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jButton4.setIconTextGap(8);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -152,7 +176,7 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
                     .addComponent(btnEditar)
                     .addComponent(btnExcluir))
                 .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

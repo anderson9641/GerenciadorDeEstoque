@@ -36,6 +36,8 @@ public class FormProduto extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
+
         jLabel2.setText("Descrição");
 
         jLabel4.setText("Unidade :");

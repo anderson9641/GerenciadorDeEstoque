@@ -54,7 +54,7 @@ public class TelaEntrada extends javax.swing.JInternalFrame {
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(1000, 590));
 
-        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
 
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -70,7 +70,7 @@ public class TelaEntrada extends javax.swing.JInternalFrame {
         txtFornecedor.setBackground(new java.awt.Color(255, 255, 255));
         txtFornecedor.setText("Descrição");
 
-        jButton1.setBackground(new java.awt.Color(107, 122, 161));
+        jButton1.setBackground(new java.awt.Color(146, 166, 76));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Add Item");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

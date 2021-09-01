@@ -12,7 +12,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     
     TelaEntrada telaEntrada = new TelaEntrada();
     TelaEstoque telaEstoque = new TelaEstoque();
-    TelaSaida telaSaida = new TelaSaida();
+    TelaSaida telaSaida;
     TelaEscola escola = new TelaEscola();
     TelaFornecedor fornecedor = new TelaFornecedor();
        
@@ -46,17 +46,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1350, 700));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(17, 50, 77));
+        jPanel1.setBackground(new java.awt.Color(41, 61, 89));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jPanel2.setBackground(new java.awt.Color(17, 50, 77));
+        jPanel2.setBackground(new java.awt.Color(41, 61, 89));
         jPanel2.setAlignmentX(0.0F);
         jPanel2.setAlignmentY(0.0F);
         jPanel2.setMaximumSize(new java.awt.Dimension(100, 700));
         jPanel2.setPreferredSize(new java.awt.Dimension(100, 700));
         jPanel2.setLayout(new java.awt.GridLayout(6, 0));
 
-        btnEstoque.setBackground(new java.awt.Color(17, 50, 77));
+        btnEstoque.setBackground(new java.awt.Color(41, 61, 89));
         btnEstoque.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         btnEstoque.setForeground(new java.awt.Color(255, 255, 255));
         btnEstoque.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -81,7 +81,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(btnEstoque);
 
-        btnEntrada.setBackground(new java.awt.Color(17, 50, 77));
+        btnEntrada.setBackground(new java.awt.Color(41, 61, 89));
         btnEntrada.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         btnEntrada.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -106,7 +106,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(btnEntrada);
 
-        btnSaida.setBackground(new java.awt.Color(17, 50, 77));
+        btnSaida.setBackground(new java.awt.Color(41, 61, 89));
         btnSaida.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         btnSaida.setForeground(new java.awt.Color(255, 255, 255));
         btnSaida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -131,7 +131,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(btnSaida);
 
-        jLabel1.setBackground(new java.awt.Color(17, 50, 77));
+        jLabel1.setBackground(new java.awt.Color(41, 61, 89));
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -159,7 +159,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel1);
 
-        btnFornecedor.setBackground(new java.awt.Color(17, 50, 77));
+        btnFornecedor.setBackground(new java.awt.Color(41, 61, 89));
         btnFornecedor.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         btnFornecedor.setForeground(new java.awt.Color(255, 255, 255));
         btnFornecedor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -187,7 +187,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(btnFornecedor);
 
-        jLabel4.setBackground(new java.awt.Color(17, 50, 77));
+        jLabel4.setBackground(new java.awt.Color(41, 61, 89));
         jLabel4.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -264,6 +264,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         if (!escola.isVisible()) {
             paineldesktop.add(escola);
             escola.setVisible(true);
+        }else{
+            //paineldesktop.remove(escola);
         }
     }//GEN-LAST:event_jLabel1MouseClicked
 
@@ -310,10 +312,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEstoqueMouseClicked
 
     private void btnSaidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaidaMouseClicked
-        
+        telaSaida = new TelaSaida();
         if (!telaSaida.isVisible()) {
             paineldesktop.add(telaSaida);
             telaSaida.setVisible(true);
+        }else{
+            telaSaida = null;
         }
     }//GEN-LAST:event_btnSaidaMouseClicked
 
@@ -355,7 +359,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         
     }
     private void mouseNoHover(JLabel label){
-        label.setBackground(new Color(17,50,77));
+        label.setBackground(new Color(41,61,89));
         
     }
     private void redimensionarFundo(){

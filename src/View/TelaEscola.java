@@ -36,6 +36,8 @@ public class TelaEscola extends javax.swing.JInternalFrame {
         setClosable(true);
         setAutoscrolls(true);
 
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
+
         jLabel1.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         jLabel1.setText("Escola");
 
@@ -44,7 +46,7 @@ public class TelaEscola extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "NOME", "ENDEREÇO", "FONE", "RESPONSAVEL"
+                "CÓDIGO", "NOME", "ENDEREÇO", "FONE", "RESPONSAVEL"
             }
         ) {
             Class[] types = new Class [] {
@@ -63,7 +65,17 @@ public class TelaEscola extends javax.swing.JInternalFrame {
             }
         });
         jScrollPane1.setViewportView(tbEscola);
+        if (tbEscola.getColumnModel().getColumnCount() > 0) {
+            tbEscola.getColumnModel().getColumn(0).setMinWidth(100);
+            tbEscola.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tbEscola.getColumnModel().getColumn(0).setMaxWidth(100);
+            tbEscola.getColumnModel().getColumn(3).setMinWidth(180);
+            tbEscola.getColumnModel().getColumn(3).setPreferredWidth(180);
+            tbEscola.getColumnModel().getColumn(3).setMaxWidth(180);
+        }
 
+        btnNovo.setBackground(new java.awt.Color(146, 166, 76));
+        btnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/plus.png"))); // NOI18N
         btnNovo.setText("Novo");
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +83,7 @@ public class TelaEscola extends javax.swing.JInternalFrame {
             }
         });
 
+        btnEditar.setBackground(new java.awt.Color(146, 166, 76));
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +91,7 @@ public class TelaEscola extends javax.swing.JInternalFrame {
             }
         });
 
+        btnExcluir.setBackground(new java.awt.Color(146, 166, 76));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,12 +99,15 @@ public class TelaEscola extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(146, 166, 76));
         jButton4.setText("Consultar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+
+        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel6.setText("Consultar :");
 
@@ -137,7 +154,7 @@ public class TelaEscola extends javax.swing.JInternalFrame {
                     .addComponent(btnEditar)
                     .addComponent(btnExcluir))
                 .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

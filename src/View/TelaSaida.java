@@ -55,7 +55,7 @@ public class TelaSaida extends javax.swing.JInternalFrame {
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(1000, 590));
 
-        jPanel1.setBackground(new java.awt.Color(231, 224, 201));
+        jPanel1.setBackground(new java.awt.Color(93, 124, 166));
 
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
         jLabel1.setText("Saida");
@@ -65,7 +65,9 @@ public class TelaSaida extends javax.swing.JInternalFrame {
         txtEscola.setForeground(new java.awt.Color(204, 204, 204));
         txtEscola.setText("Escola");
 
-        jButton1.setBackground(new java.awt.Color(107, 122, 161));
+        jButton1.setBackground(new java.awt.Color(146, 166, 76));
+        jButton1.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Add Item");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +109,9 @@ public class TelaSaida extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tbProdutosSaida);
         if (tbProdutosSaida.getColumnModel().getColumnCount() > 0) {
             tbProdutosSaida.getColumnModel().getColumn(0).setResizable(false);
+            tbProdutosSaida.getColumnModel().getColumn(1).setMinWidth(100);
+            tbProdutosSaida.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tbProdutosSaida.getColumnModel().getColumn(1).setMaxWidth(100);
         }
 
         jButton2.setBackground(new java.awt.Color(229, 42, 39));
@@ -125,7 +130,9 @@ public class TelaSaida extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(107, 122, 161));
+        jButton3.setBackground(new java.awt.Color(146, 166, 76));
+        jButton3.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Selecionar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +146,7 @@ public class TelaSaida extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(3, 3, 3)
@@ -150,7 +157,7 @@ public class TelaSaida extends javax.swing.JInternalFrame {
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
                         .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -158,7 +165,7 @@ public class TelaSaida extends javax.swing.JInternalFrame {
                             .addGap(18, 18, 18)
                             .addComponent(btnInserir))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 932, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(207, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(24, 24, 24)
@@ -168,9 +175,9 @@ public class TelaSaida extends javax.swing.JInternalFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
+                .addContainerGap(79, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(jButton3)
                     .addComponent(jLabel4)
